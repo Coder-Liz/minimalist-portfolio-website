@@ -1,0 +1,140 @@
+:root {
+  --clr-cyan: hsl(167, 36%, 54%);
+  --clr-dark-blue: hsl(205, 41%, 21%);
+  --clr-grayish-dark-blue: hsl(245, 11%, 22%);
+  --clr-very-light-grey: hsl(0, 0%, 98%);
+  --clr-light-grey: hsl(240, 2%, 92%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-error: hsl(0, 90%, 57%);
+  --clr-box-shadow: hsla(240, 2%, 92%, 60%);
+  --clr-menu-overlay: hsla(233, 14%, 25%, 40%);
+  --clr-btn-bg: hsl(205, 41%, 21%);
+  --clr-btn-bg-hover: hsl(167, 36%, 54%);
+  --clr-icon-bg: hsl(205, 40%, 19%);
+  --clr-icon-bg-hover: hsl(167, 31%, 49%);
+  --clr-btn-border: hsl(245, 10%, 22%);
+  --clr-border: hsl(0, 0%, 87%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Public Sans', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  background-color: var(--clr-very-light-grey);
+  color: var(--clr-grayish-dark-blue);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Ibarra Real Nova', Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.028125em;
+}
+
+h2 {
+  font-family: 'Ibarra Real Nova', Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.0225em;
+}
+
+h3 {
+  font-family: 'Ibarra Real Nova', Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.018125em;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.76;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+header ul,
+footer ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+label,
+input,
+button {
+  font-family: 'Public Sans', Arial, Helvetica, sans-serif;
+}
+
+input,
+textarea {
+  width: 100%;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  padding: 1rem;
+  border: 1px solid transparent;
+  background: var(--clr-light-grey);
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.button {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.125em;
+  text-transform: uppercase;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.border-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--clr-grayish-dark-blue);
+  border: 1px solid var(--clr-btn-border);
+  width: 202px;
+  height: 48px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.border-btn:hover {
+  background: var(--clr-grayish-dark-blue);
+  color: var(--clr-very-light-grey);
+}

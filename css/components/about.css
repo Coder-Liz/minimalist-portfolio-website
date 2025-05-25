@@ -1,0 +1,40 @@
+.about {
+  padding-block-start: clamp(6rem, 4.25rem + 7.45vw, 9.375rem);
+}
+
+.about__wrappper {
+  display: grid;
+  gap: 2rem;
+}
+
+.about__image {
+  width: 100%;
+  max-height: 600px;
+  display: block;
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding-block-start: 2rem;
+  padding-block-end: 3rem;
+  border-top: 1px solid var(--clr-border);
+  border-bottom: 1px solid var(--clr-border);
+}
+
+@media (min-width: 48rem) {
+  .about__wrappper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(4.3125rem, 2.26rem + 8.75vw, 7.8125rem);
+  }
+
+  .about__image {
+    height: 600px;
+  }
+
+  .about__text {
+    width: 350px;
+  }
+}
