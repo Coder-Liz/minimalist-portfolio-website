@@ -3,47 +3,50 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('form');
   const fields = ['name', 'email', 'message'];
 
-  function showError(input, messageElement, message) {
-    messageElement.textContent = message;
-    messageElement.classList.remove('hidden');
-    input.classList.add('error-border');
-  }
+  if (form) {
+    function showError(input, messageElement, message) {
+      messageElement.textContent = message;
+      messageElement.classList.remove('hidden');
+      input.classList.add('error-border');
+    }
 
-  function clearError(input, messageElement) {
-    messageElement.textContent = '';
-    messageElement.classList.add('hidden');
-    input.classList.remove('error-border');
-  }
+    function clearError(input, messageElement) {
+      messageElement.textContent = '';
+      messageElement.classList.add('hidden');
+      input.classList.remove('error-border');
+    }
 
-  function isValidEmail(email) {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-  }
+    function isValidEmail(email) {
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return regex.test(email);
+    }
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    let isFormValid = true;
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let isFormValid = true;
 
-    fields.forEach((field) => {
-      const input = document.getElementById(field);
+      fields.forEach((field) => {
+        const input = document.getElementById(field);
 
-      const errorMessage = input.parentElement.querySelector('.error-message');
+        const errorMessage =
+          input.parentElement.querySelector('.error-message');
 
-      if (!input.value.trim()) {
-        showError(input, errorMessage, 'This field is required');
-        isFormValid = false;
-      } else if (field === 'email' && !isValidEmail(input.value)) {
-        showError(input, errorMessage, 'Please enter a valid email address');
-        isFormValid = false;
-      } else {
-        clearError(input, errorMessage);
+        if (!input.value.trim()) {
+          showError(input, errorMessage, 'This field is required');
+          isFormValid = false;
+        } else if (field === 'email' && !isValidEmail(input.value)) {
+          showError(input, errorMessage, 'Please enter a valid email address');
+          isFormValid = false;
+        } else {
+          clearError(input, errorMessage);
+        }
+      });
+
+      if (isFormValid) {
+        form.submit();
       }
     });
-
-    if (isFormValid) {
-      form.submit();
-    }
-  });
+  }
 
   // ==== MOBILE MENU NAVIGATION ====
   const main = document.querySelector('#main');
