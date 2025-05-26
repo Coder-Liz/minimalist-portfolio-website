@@ -38,7 +38,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/responsive-minimalist-portfolio-website-qaWkhxfTe9)
 - Live Site URL: [Add live site URL here](https://incredible-marzipan-a3789c.netlify.app/)
 
 ## My process
